@@ -26,25 +26,34 @@
         <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#748174]">The everyday collection / 05</span>
       </header>
 
-<div class="flex flex-1 items-center justify-center py-10">
-      <div class="w-full max-w-[392px] h-[439px] rounded-[28px]">
-          <p class="text-[12px] text-[#7B887C]">
-              A MOMENT IN TIME
-          </p>
-        <div class="w-[360px] h-[360px] rounded-[180px]  border border-[#D8DBD1] bg-[#FCFBF7]">
-              <div class="w-[12px] h-[12px] rounded-[99px]  border border-[#FCFBF7] bg-[#C47E57]"></div>
-                <div class="w-[360px] h-[360px]"></div>
-                <div class="w-[360px] h-[360px]"></div>
-                <div class="w-[109.06px] h-[55.47px]  border border-[#253B35]"></div>
-      
+<div class="flex flex-1 items-center justify-center py-10"></div>
+  <div class="w-[392px] h-[439px] rounded-[28px] flex flex-col items-center justify-center gap-4">
+          <p class="text-[12px] text-[#7B887C]"> A MOMENT IN TIME</p>
+          
+      <div
+        class="relative w-[360px] h-[360px] rounded-full border border-[#D8DBD1] bg-[#FCFBF7] flex justify-center items-center"
+      >
+        <!-- Hour hand -->
+        <div id="hour"
+          class="absolute w-[7px] h-[109.6px] bg-[#253B35] rounded-full bottom-1/2 origin-bottom rotate-[45deg]"
+        ></div>
 
-        </div>
-      
-      
-      
-      
-      </div>  
+        <!-- Minute hand -->
+        <div id="minute"
+          class="absolute w-[4px] h-[140px] bg-[#253B35] rounded-full bottom-1/2 origin-bottom rotate-[120deg]"
+        ></div>
 
+        <!-- Second hand -->
+        <div id="second"
+          class="absolute w-[2px] h-[164.6px] bg-[#C47E57] bottom-1/2 origin-bottom rotate-[180deg]"
+        ></div>
+
+        <!-- Center point -->
+        <div
+          class="absolute w-[12px] h-[12px] rounded-full border border-[#FCFBF7] bg-[#C47E57] z-10"
+        ></div>
+      </div>
+</div>
 
 
 
