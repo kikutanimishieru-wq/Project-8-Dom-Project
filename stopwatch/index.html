@@ -1,20 +1,26 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="index.js" defer></script>
   </head>
 
-  <body class="min-h-screen min-w-[1000px] bg-[#101714] font-sans text-[#f0fdf4]">
-    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
-      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#c5d9bd]/10">
+  <body class="min-h-screen bg-[#101714] font-sans text-[#F0FDF4]">
+
+    <div class="mx-auto flex min-h-screen max-w-[920px] flex-col px-5">
+
+      <!-- HEADER -->
+      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#C5D9BD]/10">
+
         <nav>
           <a
             href="../index.html"
-            class="inline-flex items-center gap-2 rounded-full border border-[#c5d9bd]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#c5d9bd] transition-colors hover:border-[#c5d9bd]/35 hover:bg-[#c5d9bd]/10 hover:text-[#f0fdf4] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#c5d9bd] motion-reduce:transition-none"
+            class="inline-flex items-center gap-2 rounded-full border border-[#C5D9BD]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#C5D9BD] transition-colors hover:bg-[#C5D9BD]/10"
           >
             <svg
               width="15"
@@ -28,18 +34,195 @@
             >
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
+
             Back to projects
           </a>
         </nav>
-        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#c5d9bd]/65">The everyday collection / 04</span>
+
+        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#C5D9BD]/65">
+          The everyday collection / 04
+        </span>
+
       </header>
-      
-<div class="flex flex-1 items-center justify-center py-10">
-        <div class="w-[540px] h-[44px] justify-between ">
-          <div class="w-[12px] h-[12px] rounded-[12px]"></div>
-          <div class="w-[62px] h-[29px] rounded-[99px]"></div>
+
+      <!-- MAIN -->
+      <main class="flex flex-1 items-center justify-center py-10">
+
+        <!-- STOPWATCH CARD -->
+        <div
+          class="w-full max-w-[620px] rounded-[28px] border border-[#B5CBB226] bg-[#19231E8C] p-10"
+        >
+
+          <!-- TOP ICON AND STATUS -->
+          <div class="flex h-[44px] items-center justify-between">
+
+            <div
+              class="flex h-[44px] w-[44px] items-center justify-center rounded-[12px] bg-[#B5CBB21A]"
+            >
+              <svg
+                width="23"
+                height="23"
+                viewBox="0 0 23 23"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M19.1673 13.4167C19.1673 17.6508 15.7348 21.0833 11.5007 21.0833C7.26647 21.0833 3.83398 17.6508 3.83398 13.4167C3.83398 9.18248 7.26647 5.75 11.5007 5.75C15.7348 5.75 19.1673 9.18248 19.1673 13.4167Z"
+                  stroke="#C5D9BD"
+                  stroke-width="1.62917"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M11.5 9.58341V13.4167L13.4167 15.3334M8.625 1.91675H11.5M11.5 1.91675H14.375M11.5 1.91675V5.75008M17.25 6.70841L19.1667 4.79175"
+                  stroke="#C5D9BD"
+                  stroke-width="1.62917"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+
+            <div
+              class="flex h-[29px] min-w-[62px] items-center justify-center rounded-full border border-[#B5CBB226] bg-[#B5CBB20D] px-3"
+            >
+              <p id="status" class="text-[12px] text-[#C5D9BD]">
+                Ready
+              </p>
+            </div>
+
+          </div>
+
+          <!-- TITLE -->
+          <div class="mt-[28px]">
+
+            <h1 class="text-[40px] font-normal leading-tight tracking-[-1px] text-[#F0FDF4]">
+              Stopwatch
+            </h1>
+
+            <p class="mt-[12px] text-[14px] text-[#A4B9AD]">
+              Make time for what matters.
+            </p>
+
+          </div>
+
+          <!-- FIRST DIVIDER -->
+          <div class="mt-[36px] h-[1px] w-full bg-[#B5CBB226]"></div>
+
+          <!-- TIMER DISPLAY -->
+          <div class="mt-[36px] flex h-[86px] w-full items-center justify-between">
+
+            <!-- HOURS -->
+            <div class="flex flex-1 flex-col items-center justify-center">
+
+              <p
+                id="hours"
+                class="font-mono text-[56px] font-light leading-[1.1] tabular-nums tracking-[-3px] text-[#EDF3E8]"
+              >
+                00
+              </p>
+
+              <p class="mt-[12px] text-[9px] tracking-[2px] text-[#9BAD9E]">
+                HOURS
+              </p>
+
+            </div>
+
+            <!-- COLON -->
+            <div class="flex w-[20px] items-start justify-center self-start">
+              <p class="font-mono text-[40px] text-[#5C7161]">
+                :
+              </p>
+            </div>
+
+            <!-- MINUTES -->
+            <div class="flex flex-1 flex-col items-center justify-center">
+
+              <p
+                id="minutes"
+                class="font-mono text-[56px] font-light leading-[1.1] tabular-nums tracking-[-3px] text-[#EDF3E8]"
+              >
+                00
+              </p>
+
+              <p class="mt-[12px] text-[9px] tracking-[2px] text-[#9BAD9E]">
+                MINUTES
+              </p>
+
+            </div>
+
+            <!-- COLON -->
+            <div class="flex w-[20px] items-start justify-center self-start">
+              <p class="font-mono text-[40px] text-[#5C7161]">
+                :
+              </p>
+            </div>
+
+            <!-- SECONDS -->
+            <div class="flex flex-1 flex-col items-center justify-center">
+
+              <p
+                id="seconds"
+                class="font-mono text-[56px] font-light leading-[1.1] tabular-nums tracking-[-3px] text-[#EDF3E8]"
+              >
+                00
+              </p>
+
+              <p class="mt-[12px] text-[9px] tracking-[2px] text-[#9BAD9E]">
+                SECONDS
+              </p>
+
+            </div>
+
+          </div>
+
+          <!-- SECOND DIVIDER -->
+          <div class="mt-[36px] h-[1px] w-full bg-[#B5CBB226]"></div>
+
+          <!-- BUTTONS -->
+          <div class="mt-[32px] flex h-[48px] w-full gap-[12px]">
+
+            <!-- START -->
+            <button
+              id="startBtn"
+              type="button"
+              class="flex h-[48px] flex-[2] cursor-pointer items-center justify-center rounded-[12px] bg-[#B5CBB2] text-[14px] font-medium text-[#102418] disabled:cursor-not-allowed disabled:opacity-30 "
+            >
+              Start
+            </button>
+
+            <!-- PAUSE -->
+            <button
+              id="pauseBtn"
+              type="button"
+              disabled
+              class="flex h-[48px] flex-1 cursor-pointer items-center justify-center rounded-[12px] border border-[#B5CBB20D] bg-[#FFFFFF0D] text-[14px] text-[#DCECE2]  disabled:cursor-not-allowed disabled:opacity-30"
+            >
+              Pause
+            </button>
+
+            <!-- RESET -->
+            <button
+              id="resetBtn"
+              type="button"
+              disabled
+              class="flex h-[48px] flex-1 cursor-pointer items-center justify-center rounded-[12px] border border-[#B5CBB20D] bg-[#FFFFFF0D] text-[14px] text-[#DCECE2]  disabled:cursor-not-allowed disabled:opacity-30"
+            >
+              Reset
+            </button>
+
+          </div>
+
+          <!-- FOOTER TEXT -->
+          <p class="mt-[20px] text-center text-[12px] text-[#8AA294]">
+            A moment of focus. At your own pace.
+          </p>
+
         </div>
-      </div>
+
+      </main>
+
     </div>
+
   </body>
-</html> 
+</html>
