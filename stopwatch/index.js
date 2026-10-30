@@ -49,7 +49,8 @@ const stopTimer = () => {
 };
 
 const resetTimer = () => {
-  clearInterval(intervalId);
+clearInterval(intervalId);
+  startTime = 0;
   formatTime(startTime);
 
   startBtn.disabled = false;
