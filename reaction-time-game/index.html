@@ -5,8 +5,128 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reaction time</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="index.js" defer></script>
   </head>
-  <body>
-    Reaction time game
+
+  <body
+    class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]"
+  >
+    <div class="mx-auto flex min-h-screen w-[920px] flex-col">
+      <header
+        class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10"
+      >
+        <nav>
+          <a
+            href="../index.html"
+            class="inline-flex items-center gap-2 rounded-full border border-[#d9f99d]/15 bg-white/5 px-4 py-2.5 text-xs font-medium text-[#d9f99d] transition-colors hover:border-[#d9f99d]/35 hover:bg-[#d9f99d]/10 hover:text-[#f4f4f5] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#d9f99d] motion-reduce:transition-none"
+          >
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M19 12H5m7-7-7 7 7 7" />
+            </svg>
+            Back to projects
+          </a>
+        </nav>
+
+        <span
+          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65"
+        >
+          The everyday collection / 06
+        </span>
+      </header>
+
+      <!-- Main content -->
+      <div class="flex flex-1 items-center justify-center py-10">
+        <!-- Reaction time card -->
+        <div
+          class="w-[576px] h-[575px] rounded-[24px] flex flex-col bg-[#18181B]"
+        >
+          <!-- Title -->
+          <div class="mt-[32px] ml-[32px]">
+            <p class="text-[#F4F4F5] text-[24px]">Reaction time</p>
+            <p class="text-[#A1A1AA] text-[14px]">
+              Wait for green, then click as quickly as you can.
+            </p>
+          </div>
+
+          <!-- Reaction panel -->
+          <div
+            id="Reaction-panel"
+            class="w-[512px] h-[256px] shrink-0 rounded-[16px] gap-[12px] bg-[#27272A] flex flex-col justify-center items-center mt-[24px] ml-[32px]"
+          >
+            <!-- Icon -->
+            <div id="panel-icon">
+              <svg
+                width="48"
+                height="48"
+                viewBox="0 0 48 48"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M42 24C42 33.9411 33.9411 42 24 42C14.0589 42 6 33.9411 6 24C6 14.0589 14.0589 6 24 6C33.9411 6 42 14.0589 42 24Z"
+                  stroke-width="2"
+                  stroke="#F4F4F5"
+                />
+                <path
+                  d="M35 24C35 30.0751 30.0751 35 24 35C17.9249 35 13 30.0751 13 24C13 17.9249 17.9249 13 24 13C30.0751 13 35 17.9249 35 24Z"
+                  stroke-width="2"
+                  stroke="#F4F4F5"
+                />
+                <path
+                  d="M24 27C25.6569 27 27 25.6569 27 24C27 22.3431 25.6569 21 24 21C22.3431 21 21 22.3431 21 24C21 25.6569 22.3431 27 24 27Z"
+                  fill="#F4F4F5"
+                  stroke-width="2"
+                  stroke="#F4F4F5"
+                />
+              </svg>
+            </div>
+
+            <p id="panel-text" class="text-[#F4F4F5] text-[24px]">
+              Ready when you are
+            </p>
+
+            <p id="panel-text1" class="text-[#F4F4F5] text-[14px]">
+              Click to start
+            </p>
+          </div>
+
+          <!-- Statistics -->
+          <div class="w-[512px] flex gap-[12px] mt-[24px] ml-[32px]">
+            <!-- Last attempt -->
+            <div
+              class="w-[250px] h-[84px] rounded-[12px] gap-[4px] bg-[#27272A] flex flex-col items-center"
+            >
+              <p class="text-[#D9F99D] text-[24px] mt-[18px]">—</p>
+              <p class="text-[#A1A1AA] text-[12px]">Last attempt</p>
+            </div>
+
+            <!-- Second statistic -->
+            <div
+              class="w-[250px] h-[84px] rounded-[12px] gap-[4px] bg-[#27272A] flex flex-col items-center"
+            >
+              <p class="text-[#D9F99D] text-[24px] mt-[18px]">—</p>
+              <p class="text-[#A1A1AA] text-[12px]">Best this session</p>
+            </div>
+          </div>
+
+          <!-- Instructions -->
+          <p
+            class="text-[12px] text-[#A1A1AA] mt-[32px] ml-[32px] mr-[30px] text-center"
+          >
+            Click the panel, or focus it and press Space or Enter. Clicking
+            before green ends the attempt.
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

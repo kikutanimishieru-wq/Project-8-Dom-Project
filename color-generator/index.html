@@ -8,9 +8,13 @@
     <script src="index.js" defer></script>
   </head>
 
-  <body class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]">
+  <body
+    class="min-h-screen min-w-[1000px] bg-[#09090b] font-sans text-[#f4f4f5]"
+  >
     <div class="mx-auto flex min-h-screen w-[1240px] flex-col">
-      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10">
+      <header
+        class="flex h-24 shrink-0 items-center justify-between border-b border-[#d9f99d]/10"
+      >
         <nav>
           <a
             href="../index.html"
@@ -31,39 +35,158 @@
             Back to projects
           </a>
         </nav>
-        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65">The everyday collection / 03</span>
+
+        <span
+          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#d9f99d]/65"
+        >
+          The everyday collection / 03
+        </span>
       </header>
-     
-<div class="flex flex-1 items-center justify-center py-10"></div>
- <div class="w-[1240px] h-[104px] flex-col justify-center overflow-hidden">
-        <p class="text-[#F4F4F5] text-[30px]">Color palettes.</p>
-        <p class="text-[#A1A1AA] text-[14px]">Generated shades with Tailwind color names. Click a shade to copy its HEX background color.</p>
-  <div class="w-[1240px] h-[1px] bg-[#27272A]"></div>
-</div>
 
-<div class="w-[1240px] h-[55px] flex-col justify-center overflow-hidden">
-   <p class="text-[#A1A1AA] text-[12px]">100 → 950 · LIGHT TO DARK</p>
-   <p class="text-[#A1A1AA] text-[12px]">Ready to explore.</p>
-</div>
+      <div
+        class="w-[1240px] h-[104px] flex justify-between overflow-hidden mt-[40px]"
+      >
+        <div class="flex flex-col gap-[8px]">
+          <p class="text-[#F4F4F5] text-[30px]">Color palettes.</p>
+          <p class="text-[#A1A1AA] text-[14px]">
+            Generated shades with Tailwind color names. Click a shade to copy
+            its HEX background color.
+          </p>
+        </div>
 
-<div class="w-[1240px] h-[956px] gap-[28px] flex-col justify-center overflow-hidden">
-  <div class="w-[1240px] h-[136px] gap-[12px] flex-col justify-center overflow-hidden">
-    <p class="text-[#E4E4E7] text-[14px]">Red</p>
-  </div>  
+        <div
+          class="w-[186px] h-[48px] rounded-[12px] gap-[8px] bg-[#D9F99D] flex justify-center items-center"
+        >
+          <div>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 16 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M13.3327 4.66675V8.00008H9.99935M2.66602 11.3334V8.00008H5.99935"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#09090B"
+              />
+              <path
+                d="M4.06602 4.66667C4.43591 3.99398 4.96604 3.42292 5.60943 3.00412C6.25282 2.58532 6.98959 2.33172 7.75444 2.26578C8.51929 2.19985 9.2886 2.32362 9.99417 2.62613C10.6997 2.92864 11.3198 3.40054 11.7993 4.00001L13.3327 8.00001M2.66602 8.00001L4.19935 12C4.67891 12.5995 5.29896 13.0714 6.00453 13.3739C6.7101 13.6764 7.4794 13.8002 8.24425 13.7342C9.0091 13.6683 9.74587 13.4147 10.3893 12.9959C11.0327 12.5771 11.5628 12.006 11.9327 11.3333"
+                stroke-width="1.33333"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke="#09090B"
+              />
+            </svg>
+          </div>
+          <p class="text-[#09090B] text-[14px]">Shuffle palettes</p>
+        </div>
+      </div>
 
-    <div class="w-[1240px] h-[107px] gap-[12px] flex-col justify-center overflow-hidden">
-      <div class="w-[113.2px] h-[107px]  flex-col justify-center overflow-hidden">
-          <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#FDE3E3]"></div>
-          <div class="w-[1240px] h-[55px] flex-col justify-center overflow-hidden">
-              <p class="text-[#A1A1AA] text-[12px]">100 → 950 · LIGHT TO DARK</p>
-              <p class="text-[#A1A1AA] text-[12px]">Ready to explore.</p>
-           </div>
+      <div class="w-[1240px] h-[1px] bg-[#27272A]"></div>
 
+      <div
+        class="w-[1240px] h-[55px] flex justify-between overflow-hidden mt-[20px]"
+      >
+        <p class="text-[#A1A1AA] text-[12px]">100 → 950 · LIGHT TO DARK</p>
+        <p class="text-[#A1A1AA] text-[12px]">Ready to explore.</p>
+      </div>
+
+      <div
+        class="w-[1240px] h-[956px] gap-[28px] flex-col justify-center overflow-hidden"
+      >
+        <div
+          class="w-[1240px] h-[136px] gap-[12px] mb-[28px] flex-col justify-center"
+        >
+          <p class="text-[#E4E4E7] text-[14px] mb-[12px]">Red</p>
+
+          <div class="w-[113.2px] flex flex-col gap-[8px]">
+            <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#FDE3E3]"></div>
+
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-[#A1A1AA] text-[12px]">100</p>
+              <p class="text-[#A1A1AA] text-[12px]">#FDE3E3</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[1240px] h-[136px] gap-[12px] mb-[28px] flex-col justify-center"
+        >
+          <p class="text-[#E4E4E7] text-[14px] mb-[12px]">Amber</p>
+
+          <div class="w-[113.2px] flex flex-col gap-[8px]">
+            <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#FEF4E1]"></div>
+
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-[#A1A1AA] text-[12px]">100</p>
+              <p class="text-[#A1A1AA] text-[12px]">#A1A1AA</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[1240px] h-[136px] gap-[12px] mb-[28px] flex-col justify-center"
+        >
+          <p class="text-[#E4E4E7] text-[14px] mb-[12px]">Emerald</p>
+
+          <div class="w-[113.2px] flex flex-col gap-[8px]">
+            <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#E4FBF4]"></div>
+
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-[#A1A1AA] text-[12px]">100</p>
+              <p class="text-[#A1A1AA] text-[12px]">#E4FBF4</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[1240px] h-[136px] gap-[12px] mb-[28px] flex-col justify-center"
+        >
+          <p class="text-[#E4E4E7] text-[14px] mb-[12px]">Sky</p>
+
+          <div class="w-[113.2px] flex flex-col gap-[8px]">
+            <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#E2F5FD]"></div>
+
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-[#A1A1AA] text-[12px]">100</p>
+              <p class="text-[#A1A1AA] text-[12px]">#A1A1AA</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[1240px] h-[136px] gap-[12px] mb-[28px] flex-col justify-center"
+        >
+          <p class="text-[#E4E4E7] text-[14px] mb-[12px]">Violet</p>
+
+          <div class="w-[113.2px] flex flex-col gap-[8px]">
+            <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#EBE3FD]"></div>
+
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-[#A1A1AA] text-[12px]">100</p>
+              <p class="text-[#A1A1AA] text-[12px]">#A1A1AA</p>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="w-[1240px] h-[136px] gap-[12px] mb-[28px] flex-col justify-center"
+        >
+          <p class="text-[#E4E4E7] text-[14px] mb-[12px]">Pink</p>
+
+          <div class="w-[113.2px] flex flex-col gap-[8px]">
+            <div class="w-[113.2px] h-[64px] rounded-[12px] bg-[#FCE3F0]"></div>
+
+            <div class="flex flex-col justify-center items-center">
+              <p class="text-[#A1A1AA] text-[12px]">100</p>
+              <p class="text-[#A1A1AA] text-[12px]">#A1A1AA</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  
-</div>
-
-
   </body>
-</html> 
+</html>
