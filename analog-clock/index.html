@@ -1,66 +1,132 @@
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#f5f3ee" />
+
     <title>Analog Clock · A moment in time</title>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="index.js" defer></script>
   </head>
-  <body class="relative isolate min-h-screen min-w-[1000px] bg-[#f5f3ee] font-sans text-[#253b35] antialiased selection:bg-[#dbe4d6]">
-    <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_45%,#ffffff_0%,#f5f3ee_65%)]"></div>
+
+  <body
+    class="relative isolate min-h-screen min-w-[1000px] bg-[#f5f3ee] font-sans text-[#253b35] antialiased selection:bg-[#dbe4d6]"
+  >
+    <!-- Background -->
+    <div
+      class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_45%,#ffffff_0%,#f5f3ee_65%)]"
+    ></div>
+
     <div class="mx-auto flex min-h-screen w-[920px] flex-col">
-      <header class="flex h-24 shrink-0 items-center justify-between border-b border-[#253b35]/10">
+
+      <!-- Header -->
+      <header
+        class="flex h-24 shrink-0 items-center justify-between border-b border-[#253b35]/10"
+      >
         <nav>
           <a
             href="../index.html"
-            class="inline-flex items-center gap-2 rounded-full border border-[#253b35]/10 bg-white/60 px-4 py-2.5 text-xs font-medium text-[#52675c] transition-colors hover:border-[#253b35]/25 hover:bg-white hover:text-[#253b35] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#52675c]"
+            class="inline-flex items-center gap-2 rounded-full border border-[#253b35]/10 bg-white/60 px-4 py-2.5 text-xs font-medium text-[#52675c] transition-colors hover:border-[#253b35]/25 hover:bg-white hover:text-[#253b35]"
           >
-            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
               <path d="M19 12H5m7-7-7 7 7 7" />
             </svg>
+
             Back to projects
           </a>
         </nav>
-        <span class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#748174]">The everyday collection / 05</span>
+
+        <span
+          class="text-[10px] font-medium uppercase tracking-[2.5px] text-[#748174]"
+        >
+          The everyday collection / 05
+        </span>
       </header>
 
-<div class="flex flex-1 items-center justify-center py-10"></div>
-  <div class="w-[392px] h-[439px] rounded-[28px] flex flex-col items-center justify-center gap-4">
-          <p class="text-[12px] text-[#7B887C]"> A MOMENT IN TIME</p>
-          
-      <div
-        class="relative w-[360px] h-[360px] rounded-full border border-[#D8DBD1] bg-[#FCFBF7] flex justify-center items-center"
-      >
-        <!-- Hour hand -->
-        <div id="hour"
-          class="absolute w-[7px] h-[109.6px] bg-[#253B35] rounded-full bottom-1/2 origin-bottom rotate-[45deg]"
-        ></div>
+      <!-- Main Content -->
+      <main class="flex flex-1 items-center justify-center py-10">
 
-        <!-- Minute hand -->
-        <div id="minute"
-          class="absolute w-[4px] h-[140px] bg-[#253B35] rounded-full bottom-1/2 origin-bottom rotate-[120deg]"
-        ></div>
-
-        <!-- Second hand -->
-        <div id="second"
-          class="absolute w-[2px] h-[164.6px] bg-[#C47E57] bottom-1/2 origin-bottom rotate-[180deg]"
-        ></div>
-
-        <!-- Center point -->
+        <!-- Clock Container -->
         <div
-          class="absolute w-[12px] h-[12px] rounded-full border border-[#FCFBF7] bg-[#C47E57] z-10"
-        ></div>
-      </div>
-</div>
+          class="flex h-[439px] w-[392px] flex-col items-center justify-center gap-4 rounded-[28px]"
+        >
 
+          <!-- Clock Title -->
+          <p class="text-[12px] text-[#7B887C]">
+            A MOMENT IN TIME
+          </p>
 
+          <!-- Clock Face -->
+          <div
+            class="relative flex h-[360px] w-[360px] items-center justify-center rounded-full border border-[#D8DBD1] bg-[#FCFBF7]"
+          >
 
+            <!-- 60 Markers -->
+            <div
+              id="marker"
+              class="pointer-events-none absolute inset-0"
+            ></div>
 
-      <footer class="flex h-16 shrink-0 items-center justify-between border-t border-[#253b35]/10 text-[10px] text-[#748174]">
-        <span>Every second, thoughtfully measured.</span><span class="font-mono tracking-[2px]">ANALOG / LIVE</span>
+            <!-- 12 Numbers -->
+            <div
+              id="number"
+              class="pointer-events-none absolute inset-0"
+            ></div>
+
+            <!-- Hour Hand -->
+            <div
+              id="hour"
+              class="absolute bottom-1/2 h-[109.6px] w-[7px] origin-bottom rounded-full bg-[#253B35]"
+            ></div>
+
+            <!-- Minute Hand -->
+            <div
+              id="minute"
+              class="absolute bottom-1/2 h-[140px] w-[4px] origin-bottom rounded-full bg-[#253B35]"
+            ></div>
+
+            <!-- Second Hand -->
+            <div
+              id="second"
+              class="absolute bottom-1/2 h-[164.6px] w-[2px] origin-bottom bg-[#C47E57]"
+            ></div>
+
+            <!-- Center Point -->
+            <div
+              class="absolute z-10 h-[12px] w-[12px] rounded-full border border-[#FCFBF7] bg-[#C47E57]"
+            ></div>
+
+          </div>
+          <!-- End Clock Face -->
+
+        </div>
+        <!-- End Clock Container -->
+
+      </main>
+
+      <!-- Footer -->
+      <footer
+        class="flex h-16 shrink-0 items-center justify-between border-t border-[#253b35]/10 text-[10px] text-[#748174]"
+      >
+        <span>Every second, thoughtfully measured.</span>
+
+        <span class="font-mono tracking-[2px]">
+          ANALOG / LIVE
+        </span>
       </footer>
+
     </div>
   </body>
-</html> 
+</html>
