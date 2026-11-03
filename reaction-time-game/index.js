@@ -1,50 +1,88 @@
 const Reaction = document.getElementById("Reaction-panel");
 const panel = document.getElementById("panel-text");
-
 const panel1 = document.getElementById("panel-text1");
 const panel2 = document.getElementById("panel-icon");
 
 let state = "ready";
 let timer;
+let startTime;
 
-const changeText = (message, message1, message1fontsize, message2) => {
+const changeText = (message, icon, fontSize, title, color) => {
   panel1.textContent = message;
-  panel2.textContent = message1;
-  panel.textContent = message2;
-  panel2.style.fontsize = message1fontsize;
-  panel1.style.color= message2
-
+  panel2.textContent = icon;
+  panel2.style.fontSize = fontSize;
+  panel.textContent = title;
+  panel1.style.color = color;
+  panel2.style.color = color;
+  panel.style.color= color
 };
 
 const panelcolor = () => {
   state = "waiting";
-  Reaction.classList.remove("bg-[#27272A]");
+
+  Reaction.classList.remove("bg-[#27272A]", "bg-lime-200");
   Reaction.classList.add("bg-rose-950");
 
-  timer = setTimeout(panel1color, 3000);
+  changeText(
+    "Not yet. Stay ready.",
+    "…",
+    "48px",
+    "Wait for green",
+    "white"
+  );
 
-  changeText("Not yet. Stay ready.", "…", "48px", "Wait for green");
+  timer = setTimeout(panel1color, 3000);
 };
 
 const panel1color = () => {
   state = "go";
+
   Reaction.classList.remove("bg-rose-950");
   Reaction.classList.add("bg-lime-200");
 
-  changeText("Go, go, go!", "!", "Click now!");
+  startTime = performance.now();
+
+  changeText(
+    "Go, go, go!",
+    "!",
+    "48px",
+    "Click now!",
+    "black"
+  );
 };
 
 const panelcolor2 = () => {
+  const reactionTime = Math.round(performance.now() - startTime);
+
   state = "result";
+
   Reaction.classList.remove("bg-lime-200");
   Reaction.classList.add("bg-[#27272A]");
 
-  changeText("Click to play again", "✓", "36833");
+  changeText(
+    "Click to play again",
+    "✓",
+    "48px",
+    `${reactionTime} ms`,
+    "white"
+  );
 };
 
 const panelcolor3 = () => {
+  clearTimeout(timer);
+
   state = "result";
-  changeText("Click to try again", "↻", "Too soon");
+
+  Reaction.classList.remove("bg-rose-950");
+  Reaction.classList.add("bg-[#27272A]");
+
+  changeText(
+    "Click to try again",
+    "↻",
+    "48px",
+    "Too soon",
+    "white"
+  );
 };
 
 Reaction.addEventListener("click", () => {
